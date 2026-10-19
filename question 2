@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int questions_answered, remaining_time, already_submitted;
+
+    scanf("Questions Answered: %d", &questions_answered);
+    scanf(" Remaining Time: %d", &remaining_time);
+    scanf(" Already Submitted: %d", &already_submitted);
+
+    if (already_submitted == 0 && questions_answered >= 1 && remaining_time > 0) {
+        printf("Submission Allowed\n");
+    } else {
+        printf("Submission Not Allowed\n");
+    }
+
+    return 0;
+}
