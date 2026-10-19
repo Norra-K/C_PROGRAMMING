@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int total_coins, x, y;
+    if (scanf("%d %d %d", &total_coins, &x, &y) != 3) return 0;
+
+    // Long Ben's share
+    int long_ben = (total_coins * x) / 100;
+    int remaining1 = total_coins - long_ben;
+
+    // Blackbeard's share
+    int blackbeard = (remaining1 * y) / 100;
+    int remaining2 = remaining1 - blackbeard;
+
+    // Share per pirate (3 other pirates)
+    int pirate_share = remaining2 / 3;
+
+    // Leftover coins thrown into the sea
+    int sea = remaining2 % 3;
+
+    printf("%d\n", long_ben);
+    printf("%d\n", blackbeard);
+    printf("%d\n", pirate_share);
+    // Note: If you also need to output leftover coins: printf("%d\n", sea);
+
+    return 0;
+}
